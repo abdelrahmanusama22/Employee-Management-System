@@ -1,0 +1,116 @@
+﻿<h1 class="alert alert-success text-center">helle empyloees</h1>
+@{
+    Employee employee = new Employee()
+            {
+                Id = 5465,
+                FullName = "abdelrahman usama",
+                Position = " senior developer"
+
+            };
+}
+<dl>
+    <dt>id</dt>
+    <dd>@employee.Id</dd>
+    <dt> full name </dt>
+    <dd>@employee.FullName </dd>
+    <dt>  position </dt>
+    <dd>@employee.Position</dd>
+</dl>
+
+@model IEnumerable<Employee>
+    
+<a asp-controller="emplyees" asp-action="GetCreateView" class="btn btn-success"> create </a>
+<form method="get" asp-controller="emplyees" asp-action="GetIndexView">
+    <div class="input-group">
+
+        <input type="text" name="search" value="@ViewBag.Search" />
+        <button type="submit" class="btn btn-outline-secondary input-group-append "><i class="bi bi-search"></i> </button>
+
+    </div>
+</form>
+<br />
+<hr />
+<br />
+@if (Model.Count() > 0)
+{
+    <table class=" table caption-top table-bordered text-center table-hover table-striped ">
+        <caption class="text-center">Model </caption>
+        <thead><tr><td>@Html.DisplayNameFor(e => e.Id)</td>
+            <td>@Html.DisplayNameFor(e => e.FullName)</td>
+            <td>@Html.DisplayNameFor(e => e.Position)</td>
+            <td>@Html.DisplayNameFor(e => e.Salary)</td>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (Employee emp in Model)
+            {
+                <tr><td>@emp.Id</td><td>@emp.FullName</td><td>@emp.Position</td><td>@emp.Salary</td>
+
+                    <td>
+                        <a asp-controller="emplyees" asp-action="GetdetalisView" asp-route-id="@emp.Id"><i class="bi bi-ticket-detailed"></i></a> |
+                        <a asp-controller="emplyees" asp-action="GetEditView" asp-route-id="@emp.Id"><i class="bi bi-pencil-square"></i></a> |
+                        <a asp-controller="emplyees" asp-action="GetDeleteView" asp-route-id="@emp.Id"><i class="bi bi-trash"></i></a> |
+
+                </td>
+
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+        <th colspan="3" style="text-align:center">Total</th>
+        <th>@Model.Sum(e => e.Salary)</th>
+        <th></th>
+        </tfoot>
+    </table>
+}
+else
+{
+    <h1 class="alert alert-danger text-center">No Model</h1>
+}
+@foreach(Employee emp in Model)
+{
+<div class="card text-center mb-3" style="display:inline-block;width:18rem;">
+    <div class="card-header">@emp.FullName</div>
+        <div class="card-body">
+            <h5>@emp.Position</h5>
+            <p>@emp.joinDateTime</p>
+            <p>@emp.Id</p>
+        
+        </div>
+        <div class="card-footer">@emp.Salary</div>
+</div>    
+}
+<br />
+@foreach (Employee emp in Model)
+{
+    <div class="card text-center mb-3 text-white bg-danger" style="display:inline-block;width:18rem;">
+        <div class="card-header">@emp.FullName</div>
+        <div class="card-body">
+            <h5>@emp.Position</h5>
+            <p>@emp.joinDateTime</p>
+            <p>@emp.Id</p>
+
+        </div>
+        <div class="card-footer">@emp.Salary</div>
+    </div>
+}
+<br />
+@foreach (Employee emp in Model)
+{
+    <div class="card text-center mb-3 text-white bg-success" style="display:inline-block;width:18rem;">
+        <div class="card-header">@emp.FullName</div>
+        <div class="card-body">
+            <h5>@emp.Position</h5>
+            <p>@emp.joinDateTime</p>
+            <p>@emp.Id</p>
+
+        </div>
+        <div class="card-footer">@emp.Salary</div>
+    </div>
+}
+<br />
+<br />
+<br />
+<br />
+<br 

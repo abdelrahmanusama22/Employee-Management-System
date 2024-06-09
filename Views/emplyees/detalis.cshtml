@@ -1,0 +1,22 @@
+﻿<h1 class="alert alert-info text-center">employee Detalis</h1>
+@model Employee
+<dl class="row">
+    <dt class="col-2">@Html.DisplayNameFor(e => e.Id)</dt>
+    <dd class ="col-10">@Html.DisplayFor(e => e.Id)</dd>
+    <dt class="col-2"> @Html.DisplayNameFor(e => e.FullName) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.FullName) </dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.Position) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.Position)</dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.Salary) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.Salary)y</dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.Appraisal) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.Appraisal)y</dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.birthdate) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.birthdate)</dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.joinDateTime) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.joinDateTime)</dd>
+    <dt class="col-2">  @Html.DisplayNameFor(e => e.DepartmentId) </dt>
+    <dd class="col-10">@Html.DisplayFor(e => e.Department.Name) (@Html.DisplayFor(e => e.Department.Description))</dd>
+
+
+</dl>
