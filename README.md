@@ -97,5 +97,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Setup Instructions
 
 Ensure to replace placeholders like `your-server`, `your-database`, `your-user`, `your-password` with your actual database connection details.
-
-This README structure provides clear setup instructions, project overview, usage guidelines, contribution guidelines, licensing, and acknowledgments, formatted in Markdown for readability on GitHub. Adjust it further based on your specific project requirements and additional details you want to include.
