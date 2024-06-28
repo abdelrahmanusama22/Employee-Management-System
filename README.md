@@ -40,6 +40,7 @@ Open a terminal or command prompt and run:
 ```bash
 dotnet restore
 dotnet build
+```
 3. **Update the database connection string**
 
 Update the `ConnectionStrings` section in `appsettings.json` to point to your SQL Server instance:
