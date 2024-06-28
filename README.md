@@ -55,14 +55,13 @@ Update the `ConnectionStrings` section in `appsettings.json` to point to your SQ
 4. Apply EF Core migrations to create the database schema
 Open a terminal or command prompt and run:
 
-bash
-نسخ الكود
+```bash
 dotnet ef database update
+```
 5. Run the application
 Press F5 in Visual Studio or run:
 
 ```bash
-نسخ الكود
 dotnet run
 Project Structure
 ```
