@@ -29,3 +29,14 @@ This project is an Employee Management System web application built using ASP.NE
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/your-repository.git
+   ## Setup Instructions
+
+### 1. Open the solution in Visual Studio
+
+### 2. Restore NuGet packages and build the solution
+
+Open a terminal or command prompt and run:
+
+```bash
+dotnet restore
+dotnet build
